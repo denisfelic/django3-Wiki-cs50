@@ -1,0 +1,17 @@
+{% extends 'encyclopedia/layout.html' %}
+
+
+{% block title %}
+    Encyclopedia
+{% endblock title %}
+
+
+{% block body %}
+    <h1>List of Articles that matches</h1>
+    <ul>
+        {% for article in articles %}
+            <li><a href="{% url 'article' article %}">{{article}}</a></li>
+        
+        {% endfor %}
+    </ul>
+{% endblock body %}

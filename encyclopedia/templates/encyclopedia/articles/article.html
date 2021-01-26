@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+
+{% block title %}
+Encyclopedia - ArticleTile
+{% endblock %}
+
+
+{% block body %}
+<h1>Article {{ article_name }}</h1>
+
+<p>
+    {{ article_content|safe}}
+</p>
+<a href="{% url 'edit_article' article_name %}">edit</a>
+{% endblock %}
